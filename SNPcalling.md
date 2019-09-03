@@ -1,7 +1,7 @@
 # Kakapo_GBS
-Referenced-based SNP calling.
+Referenced-based SNP calling for *Strigops habroptilus
 
-
+***
 
 ## Pre-processing of Illumina raw reads
 
