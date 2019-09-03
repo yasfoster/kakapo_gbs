@@ -10,6 +10,7 @@ Referenced-based SNP calling &amp; population genomics.
 
 
 #remove sex chr for unfiltered.vcf (straight outta STACKS)
+
 vcftools --vcf unfilt.vcf --not-chr CM013763.1 --not-chr CM013773.1 --recode
 #After filtering, kept 182 out of 182 Individuals
 #After filtering, kept 56218 out of a possible 58466 Sites
@@ -17,6 +18,7 @@ vcftools --vcf unfilt.vcf --not-chr CM013763.1 --not-chr CM013773.1 --recode
 
 ###VCF for KGD > Fgrm
 #filter for max depth of 25
+
 vcftools --vcf nosex_unfilt.vcf --minDP 2 --maxDP 30 --recode
 #After filtering, kept 182 out of 182 Individuals
 #After filtering, kept 56218 out of a possible 56218 Sites
@@ -25,6 +27,7 @@ vcftools --vcf nosex_unfilt.vcf --minDP 2 --maxDP 30 --recode
 
 ###VCF for Fcoff, sMLH, RoH
 #filtered for depth, and 25% missing data
+
 vcftools --vcf maxdp30_mindp2.vcf --max-missing 0.75 --recode
 #After filtering, kept 182 out of 182 Individuals
 #After filtering, kept 12625 out of a possible 56218 Sites
