@@ -1,6 +1,29 @@
 # Kakapo_GBS
 Referenced-based SNP calling &amp; population genomics.
 
+# Pre-processing of Illumina raw reads
+
+### Process_radtags to demultiplex and trim RE for each lane 
+
+`process_radtags -p /home/yasmin.holden/uoo00080/projects/stacks/raw/lane1/ -b /home/yasmin.holden/uoo00080/projects/stacks/info/barcodes_lane1.txt -o /home/yasmin.holden/uoo00080/projects/stacks/final_ncbi_stacks_v2/ --renz_1 pstI --renz_2 mspI --inline_null -c -q -r &> process_radtags_test.lane1.oe `
+
+`process_radtags -p /home/yasmin.holden/uoo00080/projects/stacks/raw/lane2/ -b /home/yasmin.holden/uoo00080/projects/stacks/info/barcodes_lane2.txt -o /home/yasmin.holden/uoo00080/projects/stacks/final_ncbi_stacks_v2/ --renz_1 pstI --renz_2 mspI --inline_null -c -q -r &> process_radtags_test.lane2.oe `
+
+`process_radtags -p /home/yasmin.holden/uoo00080/projects/stacks/raw/lane3/ -b /home/yasmin.holden/uoo00080/projects/stacks/info/barcodes_lane3.txt -o /home/yasmin.holden/uoo00080/projects/stacks/final_ncbi_stacks_v2/ --renz_1 pstI --renz_2 mspI --inline_null -c -q -r &> process_radtags_test.lane3.oe `
+
+### CAT individuals that contain multiple lanes e.g.
+
+` cat Jack_1.fq.gz Jack_2.fq.gz > Jack_all.fq.gz`
+
+### Trimgalore to remove illumina adapters, Q<20 and fastQC, followed by MultiQC
+
+`trim_galore --quality 20 --fastqc $name.fq.gz`
+`multiqc .`
+
+### Cutadapt to truncate
+
+`cutadapt -m 72 -l 72 -j 2 -o $name"_final.fq.gz" $name"_trimmed.fq.gz"`
+
 
 
 
