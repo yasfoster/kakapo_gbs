@@ -20,6 +20,8 @@
 ***
 
 
+
+
 ### InbreedR: sMLH
 
 ### In R-Studio
@@ -48,14 +50,14 @@
 `plot(het_var, main = "Variance in sMLH", col = "cornflowerblue", cex.axis=0.95)`
 
 
-#### calculate g2 ID 
+##### calculate g2 ID 
 `g2_kakapo_snps <- g2_snps(kakapo_snp_genotypes, nperm = 100, nboot = 10, CI = 0.95, parallel = FALSE, ncores = NULL)`
 
 `g2_kakapo_snps`
 
 `plot(g2_kakapo_snps, main = "Identity disequilibrium", col = "cornflowerblue", cex.axis=0.95)`
 
-##### plot shows the distribution of bootstrap results including the confidence interval.
+###### plot shows the distribution of bootstrap results including the confidence interval.
 
 
 ##### calcualte het-het corr 
