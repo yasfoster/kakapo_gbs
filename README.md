@@ -7,3 +7,5 @@ Genotyping-by-sequencing (GBS) performed at AgResearch Invermay, NZ.
 Double-digested with MspI and PstI.
 
 Referenced-based SNP calling &amp; population genomics.
+
+***
