@@ -21,7 +21,6 @@ Z chromosome CM013763.1
 
 W chromosome CM013773.1
 
-***
 
 #### Remove sex chr for unfiltered.vcf (straight outta STACKS, except removed Sarah, Tiaho & Wehetuatanga)
 
