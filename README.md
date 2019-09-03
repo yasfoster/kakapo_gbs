@@ -73,9 +73,10 @@ W chromosome CM013773.1
 
 `vcftools --vcf unfilt.vcf --not-chr CM013763.1 --not-chr CM013773.1 --recode`
 
-#After filtering, kept 182 out of 182 Individuals
-#After filtering, kept 56218 out of a possible 58466 Sites
-#final: nosex_unfilt.vcf
+After filtering, kept 182 out of 182 Individuals
+
+After filtering, kept 56218 out of a possible 58466 Sites
+final: nosex_unfilt.vcf
 
 
 #### VCF for KGD > Fgrm
@@ -83,9 +84,10 @@ W chromosome CM013773.1
 
 `vcftools --vcf nosex_unfilt.vcf --minDP 2 --maxDP 30 --recode`
 
-#After filtering, kept 182 out of 182 Individuals
-#After filtering, kept 56218 out of a possible 56218 Sites
-#final maxdp30_mindp2.vcf
+After filtering, kept 182 out of 182 Individuals
+
+After filtering, kept 56218 out of a possible 56218 Sites
+final maxdp30_mindp2.vcf
 
 
 #### VCF for Fcoff, sMLH, RoH
@@ -93,7 +95,8 @@ W chromosome CM013773.1
 
 `vcftools --vcf maxdp30_mindp2.vcf --max-missing 0.75 --recode`
 
-#After filtering, kept 182 out of 182 Individuals
-#After filtering, kept 12625 out of a possible 56218 Sites
-#final maxdp30_mindp2_md75.vcf
+After filtering, kept 182 out of 182 Individuals
+
+After filtering, kept 12625 out of a possible 56218 Sites
+final maxdp30_mindp2_md75.vcf
 
