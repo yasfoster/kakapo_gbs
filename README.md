@@ -14,7 +14,7 @@ Referenced-based SNP calling &amp; population genomics.
 `process_radtags -p /stacks/raw/lane3/ -b stacks/info/barcodes_lane3.txt -o /stacks/final_ncbi_stacks_v2/ --renz_1 pstI --renz_2 mspI --inline_null -c -q -r &> process_radtags_test.lane3.oe `
 
 
-#### CAT individuals that contain multiple lanes e.g.
+#### CAT individuals that contain multiple lanes
 
 ` cat Jack_1.fq.gz Jack_2.fq.gz > Jack_all.fq.gz`
 
