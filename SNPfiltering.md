@@ -9,6 +9,7 @@
 
 `vcftools --vcf filtered.vcf --remove-indv Sarah --remove-indv Tiaho --remove-indv Weheruatanga --recode`
 
+***
 
 #### Remove sex chromosomes so downstream analyses performed on neutral autosomal SNPs
 
