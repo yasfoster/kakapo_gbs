@@ -76,7 +76,8 @@ W chromosome CM013773.1
 After filtering, kept 182 out of 182 Individuals
 
 After filtering, kept 56218 out of a possible 58466 Sites
-final: nosex_unfilt.vcf
+
+Final vcf: nosex_unfilt.vcf
 
 
 #### VCF for KGD > Fgrm
@@ -87,7 +88,8 @@ final: nosex_unfilt.vcf
 After filtering, kept 182 out of 182 Individuals
 
 After filtering, kept 56218 out of a possible 56218 Sites
-final maxdp30_mindp2.vcf
+
+Final vcf: maxdp30_mindp2.vcf
 
 
 #### VCF for Fcoff, sMLH, RoH
@@ -98,5 +100,6 @@ final maxdp30_mindp2.vcf
 After filtering, kept 182 out of 182 Individuals
 
 After filtering, kept 12625 out of a possible 56218 Sites
-final maxdp30_mindp2_md75.vcf
+
+Final vcf: maxdp30_mindp2_md75.vcf
 
