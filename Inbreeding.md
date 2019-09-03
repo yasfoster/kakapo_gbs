@@ -1,7 +1,7 @@
 ## Inbreeding estimates
 
 
-#### Fcoff
+### Inbreeding coefficient: Fcoff
 
 `vcftools --vcf filtered.vcf --het`
 
@@ -20,10 +20,11 @@
 ***
 
 
-#### sMLH
+### InbreedR: sMLH
 
-## In R-Studio
+#### In R-Studio
 
+`
 library(inbreedR)
 #calculate sMLH
 het <- sMLH(kakapo_snp_genotypes)
@@ -62,7 +63,7 @@ plot(hf, main = "r2 bootstrapping distribution - estimated r2 with CI", col = "c
 
 #wrecked laptop rip
 #sim_g2 <- simulate_g2(n_ind = 180, H_nonInb = 0.5, meanF = 0.2, varF = 0.03, subsets = seq(from = 1000, to = 14000, by = 1000), reps = 100, type = "snps")
-
+`
 
 ***
 
