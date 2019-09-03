@@ -87,4 +87,33 @@
 
 #### KGD Fgrm
 
-#### Runs of Homozygosity
+### In R-Studio
+
+`genofile <- "maxdp.vcf.ra.tab"`
+
+`gform <- "Tassel"`
+
+`source("GBS-Chip-Gmatrix.R")`
+
+`Gfull      <- calcG()`
+
+`GHWdgm.05  <- calcG(which(HWdis > -0.05), "HWdgm.05", npc = 4)`
+
+###### recalculate using Hardy-Weinberg disequilibrium cut-off at -0.05
+
+`write.table(Gfull$G5,"G5.txt",sep="\t")`
+
+
+***
+
+
+#### Runs of Homozygosity in PLINK
+
+`plink --vcf filtered.vcf --allow-extra-chr --double-id --out filtered_test`
+
+`plink --bfile filtered_test --recode --tab --allow-extra-chr --out filtered_test`
+
+`plink --file filtered_test --allow-extra-chr --homozyg --homozyg-snp 25 --homozyg-het 1 --homozyg-density 180 --homozyg-gap 1000 --homozyg-window-snp 25 --homozyg-window-het 1 --homozyg-window-missing 5 --homozyg-window-threshold 0.05 --out filtered_roh`
+
+
+***
