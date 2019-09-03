@@ -19,7 +19,7 @@ After filtering, kept 56218 out of a possible 58466 Sites
 
 Final vcf: nosex_unfilt.vcf
 
-
+***
 
 #### VCF for KGD > Fgrm
 ##### filter for max depth of 20, min depth 2
@@ -32,7 +32,7 @@ After filtering, kept 56218 out of a possible 56218 Sites
 
 Final vcf: maxdp30_mindp2.vcf
 
-
+***
 
 #### VCF for Fcoff, sMLH, RoH
 ##### filtered for depth, and 25% missing data
@@ -45,3 +45,4 @@ After filtering, kept 12625 out of a possible 56218 Sites
 
 Final vcf: maxdp30_mindp2_md75.vcf
 
+***
