@@ -1,5 +1,5 @@
 # Kakapo_GBS
-Referenced-based SNP calling for *Strigops habroptilus
+Referenced-based SNP calling for *Strigops habroptilus*
 
 ***
 
