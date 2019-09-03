@@ -7,9 +7,12 @@
 
 ##### OR
 
-`plink --vcf filtered.vcf --allow-extra-chr --double-id --out filtered_test
-plink --bfile filtered_test --recode --tab --allow-extra-chr --out filtered_test
-plink --bfile filtered_test --allow-extra-chr --freq --missing --het --ibc --out filtered_test`
+`plink --vcf filtered.vcf --allow-extra-chr --double-id --out filtered_test`
+
+`plink --bfile filtered_test --recode --tab --allow-extra-chr --out filtered_test`
+
+`plink --bfile filtered_test --allow-extra-chr --freq --missing --het --ibc --out filtered_test`
+
 
 ##### VCFtools --het and PLINK --het provide same output
 
