@@ -24,15 +24,14 @@
 
 #### In R-Studio
 
-`
-library(inbreedR)
+`library(inbreedR)
 #calculate sMLH
 het <- sMLH(kakapo_snp_genotypes)
 het
 write.table(het, "sMLH_kakapo.txt", sep="\t")
 plot(het)
 plot(het, main = "sMLH",
-     col = "cornflowerblue", cex.axis=0.95)
+     col = "cornflowerblue", cex.axis=0.95)`
 
 
 #variance in sMLH
