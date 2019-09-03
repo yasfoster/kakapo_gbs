@@ -9,7 +9,7 @@ Referenced-based SNP calling &amp; population genomics.
 
 ### Remove sex chr for unfiltered.vcf (straight outta STACKS)
 
-'vcftools --vcf unfilt.vcf --not-chr CM013763.1 --not-chr CM013773.1 --recode'
+`vcftools --vcf unfilt.vcf --not-chr CM013763.1 --not-chr CM013773.1 --recode`
 #After filtering, kept 182 out of 182 Individuals
 #After filtering, kept 56218 out of a possible 58466 Sites
 #final: nosex_unfilt.vcf
