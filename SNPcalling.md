@@ -55,7 +55,7 @@ Referenced-based SNP calling for *Strigops habroptilus*
 
 ***
 
-## ref_map.pl
+## Stacks V.1.46 ref_map.pl
 
 #### with reduced soft clipping and no population filters
 
