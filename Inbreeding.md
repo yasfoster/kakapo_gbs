@@ -24,7 +24,7 @@
 
 ### InbreedR: sMLH
 
-### In R-Studio
+#### In R-Studio
 
 `library(inbreedR)`
 
@@ -85,9 +85,9 @@
 ***
 
 
-#### KGD Fgrm
+### KGD Fgrm
 
-### In R-Studio
+#### In R-Studio
 
 `genofile <- "maxdp.vcf.ra.tab"`
 
@@ -107,7 +107,7 @@
 ***
 
 
-#### Runs of Homozygosity in PLINK
+### Runs of Homozygosity in PLINK
 
 `plink --vcf filtered.vcf --allow-extra-chr --double-id --out filtered_test`
 
