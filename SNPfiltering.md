@@ -46,3 +46,13 @@ After filtering, kept 12625 out of a possible 56218 Sites
 Final vcf: maxdp30_mindp2_md75.vcf
 
 ***
+
+###After, --missing-indv to generate file reporting the missingness on a per-individual basis
+
+`vcftools --vcf filtered.vcf ---missing-indv`
+
+#####removed individuals with high missingness >75%
+
+`vcftools --vcf filtered.vcf --remove-indv Sarah --remove-indv Tiaho --remove-indv Weheruatanga --recode`
+
+***
