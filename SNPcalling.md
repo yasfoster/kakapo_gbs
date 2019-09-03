@@ -1,5 +1,5 @@
 # Kakapo_GBS
-Referenced-based SNP calling &amp; population genomics.
+Referenced-based SNP calling.
 
 
 
@@ -35,7 +35,7 @@ Referenced-based SNP calling &amp; population genomics.
 `fastqc .`
 `multiqc .`
 
-
+***
 
 ## Alignment to reference genome
 
@@ -53,7 +53,7 @@ Referenced-based SNP calling &amp; population genomics.
 
 `samtools flagstat $name.bam > $name.txt`
 
-
+***
 
 ## ref_map.pl
 
@@ -61,3 +61,4 @@ Referenced-based SNP calling &amp; population genomics.
 
 `ref_map.pl -b 1 -T 8 -o /stacks/stacks_final/ -O /stacks/info/popmap.txt --samples /stacks/stacks_final/alignments_bwa/ -S -X "pstacks:--max_clipped 0.5" -X "populations:--fstats -k --log_fst_comp --vcf --vcf_haplotypes --genepop --plink --verbose"`
 
+***
