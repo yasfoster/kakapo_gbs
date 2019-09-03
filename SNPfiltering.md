@@ -19,7 +19,7 @@ Final vcf: nosex_unfilt.vcf
 
 
 #### VCF for KGD > Fgrm
-#filter for max depth of 20, min depth 2
+##### filter for max depth of 20, min depth 2
 
 `vcftools --vcf nosex_unfilt.vcf --minDP 2 --maxDP 30 --recode`
 
@@ -31,7 +31,7 @@ Final vcf: maxdp30_mindp2.vcf
 
 
 #### VCF for Fcoff, sMLH, RoH
-#filtered for depth, and 25% missing data
+##### filtered for depth, and 25% missing data
 
 `vcftools --vcf maxdp30_mindp2.vcf --max-missing 0.75 --recode`
 
