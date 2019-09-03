@@ -24,6 +24,8 @@
 
 ### InbreedR: sMLH
 
+https://cran.r-project.org/web/packages/inbreedR/vignettes/inbreedR_step_by_step.html
+
 #### In R-Studio
 
 `library(inbreedR)`
@@ -86,6 +88,8 @@
 
 
 ### KGD Fgrm
+
+https://github.com/AgResearch/KGD
 
 #### In R-Studio
 
