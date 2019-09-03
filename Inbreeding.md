@@ -103,6 +103,8 @@
 
 `write.table(Gfull$G5,"G5.txt",sep="\t")`
 
+`write.table(Gfull_heatmap$G5, "G5_heatmap.txt", sep="\t")`
+
 
 ***
 
