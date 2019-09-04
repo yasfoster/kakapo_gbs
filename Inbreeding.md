@@ -170,14 +170,13 @@ python2.7 vcf2ra_ro_ao.py filtered.vcf
 
 `Gfull      <- calcG()`
 
-`GHWdgm.05  <- calcG(which(HWdis > -0.05), "HWdgm.05", npc = 4)`
-
-###### recalculate using Hardy-Weinberg disequilibrium cut-off at -0.05
-
 `write.table(Gfull$G5,"G5.txt",sep="\t")`
 
 `write.table(Gfull_heatmap$G5, "G5_heatmap.txt", sep="\t")`
 
+###### In Excel, extract diagonal of G5 matrix for self-relatedness estimates
+
+`=INDEX(A1:E1,,ROWS($1:1))`
 
 ***
 
