@@ -138,16 +138,21 @@ https://cran.r-project.org/web/packages/inbreedR/vignettes/inbreedR_step_by_step
 `plot(hf, main = "r2 bootstrapping distribution - estimated r2 with CI", col = "cornflowerblue", cex.axis=0.85)`
 
 
-###### wrecked laptop rip
-###### sim_g2 <- simulate_g2(n_ind = 180, H_nonInb = 0.5, meanF = 0.2, varF = 0.03, subsets = seq(from = 1000, to = 14000, by = 1000), reps = 100, type = "snps")
-`
+###### wrecked laptop rip: sim_g2 <- simulate_g2(n_ind = 180, H_nonInb = 0.5, meanF = 0.2, varF = 0.03, subsets = seq(from = 1000, to = 14000, by = 1000), reps = 100, type = "snps")
+
 
 ***
 
 
-### KGD Fgrm
+## Kinship using GBS with depth adjustment (kGD): Fgrm
+
+##### "Unbiased estimates of relatedness can be obtained by using only those SNPs with genotype calls in both individuals. The expected value of this estimator is independent of the SNP depth in each individual, under a model of genotype calling that includes the special case of the two alleles being read at random" (Dodds et al. 2015)
+
+##### In contrast, the estimator of self-relatedness (diagonal of GRM = Fgrm) does depend on the SNP depth, providing unbiased estimates of self-relatedness.
 
 https://github.com/AgResearch/KGD
+
+https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-015-2252-3
 
 #### In R-Studio
 
@@ -171,7 +176,15 @@ https://github.com/AgResearch/KGD
 ***
 
 
-### Runs of Homozygosity in PLINK
+## Runs of Homozygosity (RoH) in PLINK
+
+##### Following parameters similar to Grossen et al. 2017 and Kardos, Luikart & Allendorf et al. 2015
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5775499/pdf/EVA-11-123.pdf
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4815495/pdf/hdy201517a.pdf
+
+##### Difference between Grossen et al. & Kardos papers is --homozyg-density (kb/snp)
 
 `plink --vcf filtered.vcf --allow-extra-chr --double-id --out filtered_test`
 
