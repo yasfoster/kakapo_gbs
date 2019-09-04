@@ -17,13 +17,13 @@ https://www.cog-genomics.org/plink/1.9/basic_stats#ibc
 
 `plink --bfile filtered_test --recode --tab --allow-extra-chr --out filtered_test`
 
-`plink --bfile filtered_test --allow-extra-chr --freq --missing --het --ibc --out filtered_test`
-
+`plink --bfile filtered_test --allow-extra-chr --het --ibc --out filtered_test`
 
 ##### VCFtools --het and PLINK --het provide same output
 
-##### "--het computes observed and expected autosomal homozygous genotype counts for each sample, and reports method-of-moments F coefficient estimates (i.e. (<observed hom. count> - <expected count>) / (<total observations> - <expected count>))" (From PLINK) 
-     
+###### "--het computes observed and expected autosomal homozygous genotype counts for each sample, and reports method-of-moments F coefficient estimates (i.e. (<observed hom. count> - <expected count>) / (<total observations> - <expected count>))" (From PLINK) 
+
+###### "--ibc (ported from GCTA) calculates three inbreeding coefficients for each sample. Briefly, Fhat1 is the usual variance-standardized relationship minus 1, Fhat2 is approximately equal to the --het estimate, and Fhat3 is based on the correlation between uniting gametes." (From PLINK)
 
 
 ***
