@@ -35,7 +35,7 @@ Final vcf: nosex_unfilt.vcf
 ***
 
 #### VCF for KGD > Fgrm
-##### filter for max depth of 20, min depth 2
+##### filter for max depth of 30, min depth 2
 
 `vcftools --vcf nosex_unfilt.vcf --minDP 2 --maxDP 30 --recode`
 
