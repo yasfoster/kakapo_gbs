@@ -3,6 +3,12 @@
 
 ### Inbreeding coefficient: Fcoff
 
+##### "Calculates a measure of heterozygosity on a per-individual basis. Specfically, the inbreeding coefficient, F, is estimated for each individual using a method of moments" (from VCFtools)
+
+https://vcftools.github.io/man_latest.html
+
+https://www.cog-genomics.org/plink/1.9/basic_stats#ibc
+
 `vcftools --vcf filtered.vcf --het`
 
 ##### OR
@@ -15,6 +21,9 @@
 
 
 ##### VCFtools --het and PLINK --het provide same output
+
+##### "--het computes observed and expected autosomal homozygous genotype counts for each sample, and reports method-of-moments F coefficient estimates (i.e. (<observed hom. count> - <expected count>) / (<total observations> - <expected count>))" (From PLINK) 
+     
 
 
 ***
