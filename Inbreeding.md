@@ -33,6 +33,8 @@ https://www.cog-genomics.org/plink/1.9/basic_stats#ibc
 
 ### InbreedR: standardised multilocus heterozygosity (sMLH)
 
+##### "Using SNP markers, it is possible to measure variance in inbreeding through the strength of correlation in heterozygosity across marker loci, termed identity disequilib-rium (ID). ID can be quantified using the measure g2, which is also a central parameter in HFC theory that can be used within a wider framework to estimate the direct impact ofinbreeding on both marker heterozygosity and fitness."(Stoffel et al. 2016).
+
 https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.12588
 
 https://cran.r-project.org/web/packages/inbreedR/vignettes/inbreedR_step_by_step.html
@@ -97,6 +99,7 @@ https://cran.r-project.org/web/packages/inbreedR/vignettes/inbreedR_step_by_step
 
 
 ##### variance in sMLH
+
 `het_var <- var(het)`
 
 `het_var`
@@ -105,6 +108,7 @@ https://cran.r-project.org/web/packages/inbreedR/vignettes/inbreedR_step_by_step
 
 
 ##### calculate g2 ID 
+
 `g2_kakapo_snps <- g2_snps(kakapo_snp_genotypes, nperm = 100, nboot = 10, CI = 0.95, parallel = FALSE, ncores = NULL)`
 
 `g2_kakapo_snps`
@@ -115,6 +119,7 @@ https://cran.r-project.org/web/packages/inbreedR/vignettes/inbreedR_step_by_step
 
 
 ##### calcualte het-het corr 
+
 `HHC_kakapo_snps <- HHC(kakapo_snp_genotypes, reps = 100)`
 
 `HHC_kakapo_snps`
@@ -123,6 +128,7 @@ https://cran.r-project.org/web/packages/inbreedR/vignettes/inbreedR_step_by_step
 
 
 ##### r^2 between inbreeding and heterozygosity
+
 `hf <- r2_hf(genotypes = kakapo_snp_genotypes, nboot = 100, type = "snps", parallel = FALSE)`
 
 `hf`
@@ -132,8 +138,8 @@ https://cran.r-project.org/web/packages/inbreedR/vignettes/inbreedR_step_by_step
 `plot(hf, main = "r2 bootstrapping distribution - estimated r2 with CI", col = "cornflowerblue", cex.axis=0.85)`
 
 
-#wrecked laptop rip
-#sim_g2 <- simulate_g2(n_ind = 180, H_nonInb = 0.5, meanF = 0.2, varF = 0.03, subsets = seq(from = 1000, to = 14000, by = 1000), reps = 100, type = "snps")
+###### wrecked laptop rip
+###### sim_g2 <- simulate_g2(n_ind = 180, H_nonInb = 0.5, meanF = 0.2, varF = 0.03, subsets = seq(from = 1000, to = 14000, by = 1000), reps = 100, type = "snps")
 `
 
 ***
