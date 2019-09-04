@@ -3,7 +3,7 @@
 
 ### Inbreeding coefficient: Fcoff
 
-##### "Calculates a measure of heterozygosity on a per-individual basis. Specfically, the inbreeding coefficient, F, is estimated for each individual using a method of moments" (from VCFtools)
+##### Vcftools --het calculates a measure of heterozygosity on a per-individual basis. Specfically, the inbreeding coefficient, Fcoff, is estimated for each individual using a method of moments
 
 https://vcftools.github.io/man_latest.html
 
@@ -21,9 +21,9 @@ https://www.cog-genomics.org/plink/1.9/basic_stats#ibc
 
 ##### VCFtools --het and PLINK --het provide same output
 
-###### "--het computes observed and expected autosomal homozygous genotype counts for each sample, and reports method-of-moments F coefficient estimates (i.e. (<observed hom. count> - <expected count>) / (<total observations> - <expected count>))" (From PLINK) 
+###### PLINK --het computes observed and expected autosomal homozygous genotype counts for each sample, and reports method-of-moments F coefficient estimates (i.e. (<observed hom. count> - <expected count>) / (<total observations> - <expected count>))
 
-###### "--ibc (ported from GCTA) calculates three inbreeding coefficients for each sample. Briefly, Fhat1 is the usual variance-standardized relationship minus 1, Fhat2 is approximately equal to the --het estimate, and Fhat3 is based on the correlation between uniting gametes." (From PLINK)
+###### PLINK --ibc (ported from GCTA) calculates three inbreeding coefficients for each sample. Briefly, Fhat1 is the usual variance-standardized relationship minus 1, Fhat2 is approximately equal to the --het estimate, and Fhat3 is based on the correlation between uniting gametes.
 
 
 ***
@@ -31,7 +31,9 @@ https://www.cog-genomics.org/plink/1.9/basic_stats#ibc
 
 
 
-### InbreedR: sMLH
+### InbreedR: standardised multilocus heterozygosity (sMLH)
+
+https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.12588
 
 https://cran.r-project.org/web/packages/inbreedR/vignettes/inbreedR_step_by_step.html
 
@@ -68,15 +70,19 @@ https://cran.r-project.org/web/packages/inbreedR/vignettes/inbreedR_step_by_step
 
 `kakapo_snp_genotypes <- inbreedR::convert_raw(snp_geno)`
 
+***
+
 ##### check data
+
+`library(inbreedR)`
 
 `check_data(kakapo_snp_genotypes)`
 
 ***
 
-`library(inbreedR)`
+#### calculate sMLH
 
-##### calculate sMLH
+`library(inbreedR)`
 
 `het <- sMLH(kakapo_snp_genotypes)`
 
