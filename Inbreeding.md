@@ -27,6 +27,43 @@
 https://cran.r-project.org/web/packages/inbreedR/vignettes/inbreedR_step_by_step.html
 
 #### In R-Studio
+##### convert VCF using vcfR & reshape2
+
+`library(vcfR)`
+
+`library(reshape2)`
+
+`vcf_file <- "filtered.vcf`
+
+##### read vcf
+
+`vcf <- read.vcfR(vcf_file, verbose = FALSE )`
+
+##### extract genotypes
+
+`gt <- extract.gt(vcf)`
+
+##### transpose and data.frame
+
+`gt <- as.data.frame(t(gt), stringsAsFactors = FALSE)`
+
+##### NA handling
+
+`gt[gt == "."] <- NA`
+
+##### split columns
+
+`snp_geno <- do.call(cbind, apply(gt, 2, function(x) colsplit(x, "/", c("a","b"))))`
+
+##### convert
+
+`kakapo_snp_genotypes <- inbreedR::convert_raw(snp_geno)`
+
+##### check data
+
+`check_data(kakapo_snp_genotypes)`
+
+***
 
 `library(inbreedR)`
 
