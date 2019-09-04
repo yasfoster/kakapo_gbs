@@ -154,6 +154,12 @@ https://github.com/AgResearch/KGD
 
 https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-015-2252-3
 
+##### Convert VCF for KGD
+
+```python
+python2.7 vcf2ra_ro_ao.py filtered.vcf
+```
+
 #### In R-Studio
 
 `genofile <- "maxdp.vcf.ra.tab"`
