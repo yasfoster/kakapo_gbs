@@ -3,11 +3,11 @@
 
 
 
-###### After, --missing-indv to generate file reporting the missingness on a per-individual basis
+##### After, --missing-indv to generate file reporting the missingness on a per-individual basis
 
 `vcftools --vcf unfilt.vcf --missing-indv`
 
-###### removed individuals with high missingness >75%
+##### removed individuals with high missingness >75%
 
 `vcftools --vcf unfilt.vcf --remove-indv Sarah --remove-indv Tiaho --remove-indv Weheruatanga --recode`
 
