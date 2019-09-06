@@ -40,8 +40,6 @@ After filtering, kept 56218 out of a possible 58466 Sites
 
 `vcftools --vcf nosex_unfilt.vcf --minDP 2 --maxDP 30 --recode`
 
-After filtering, kept 179 out of 179 Individuals
-
 After filtering, kept 56218 out of a possible 56218 Sites
 
 ###### Final vcf: KGD_maxdp30_mindp2.vcf
@@ -54,8 +52,6 @@ After filtering, kept 56218 out of a possible 56218 Sites
 
 `vcftools --vcf maxdp30_mindp2.vcf --max-missing 0.75 --recode`
 
-After filtering, kept 179 out of 179 Individuals
-
 After filtering, kept 13232 out of a possible 56218 Sites
 
 ###### Final vcf: maxdp30_mindp2_md75.vcf
@@ -67,8 +63,6 @@ After filtering, kept 13232 out of a possible 56218 Sites
 ##### filtered for depth, and allowing for up to 50% missing data
 
 `vcftools --vcf maxdp30_mindp2.vcf --max-missing 0.50 --recode`
-
-After filtering, kept 179 out of 179 Individuals
 
 After filtering, kept 24930 out of a possible 56218 Sites
 
