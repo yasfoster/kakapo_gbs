@@ -33,7 +33,7 @@ https://www.cog-genomics.org/plink/1.9/basic_stats#ibc
 
 ### InbreedR: standardised multilocus heterozygosity (sMLH)
 
-##### "Using SNP markers, it is possible to measure variance in inbreeding through the strength of correlation in heterozygosity across marker loci, termed identity disequilib-rium (ID). ID can be quantified using the measure g2, which is also a central parameter in HFC theory that can be used within a wider framework to estimate the direct impact ofinbreeding on both marker heterozygosity and fitness."(Stoffel et al. 2016).
+##### "Using SNP markers, it is possible to measure variance in inbreeding through the strength of correlation in heterozygosity across marker loci, termed identity disequilibrium (ID). ID can be quantified using the measure g2, which is also a central parameter in HFC theory that can be used within a wider framework to estimate the direct impact of inbreeding on both marker heterozygosity and fitness."(Stoffel et al. 2016).
 
 https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.12588
 
