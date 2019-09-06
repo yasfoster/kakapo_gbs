@@ -15,14 +15,14 @@
 
 ***
 
-#### Remove sex chromosomes so downstream analyses performed on neutral autosomal SNPs
+### Remove sex chromosomes so downstream analyses performed on neutral autosomal SNPs
 
 Z chromosome CM013763.1
 
 W chromosome CM013773.1
 
 
-#### Remove sex chr for unfiltered.vcf (straight outta STACKS, except removed Sarah, Tiaho & Wehetuatanga)
+#### Remove sex chr for unfiltered.vcf (i.e. straight outta STACKS, except removed: Sarah, Tiaho & Wehetuatanga)
 
 `vcftools --vcf unfilt_removed_indv_high_miss.vcf --not-chr CM013763.1 --not-chr CM013773.1 --recode`
 
@@ -35,7 +35,7 @@ After filtering, kept 56218 out of a possible 58466 Sites
 ***
 
 #### VCF for KGD > Fgrm
-###### minimal filtering as KGD applies its own (e.g. sample & SNP depth > 0.01)
+##### minimal filtering as KGD applies its own (e.g. sample & SNP depth > 0.01)
 ##### filtered for maximum depth of 30, minimum depth of 2
 
 `vcftools --vcf nosex_unfilt.vcf --minDP 2 --maxDP 30 --recode`
@@ -49,7 +49,7 @@ After filtering, kept 56218 out of a possible 56218 Sites
 ***
 
 #### VCF for Fcoff & sMLH 
-###### most stringent filtering
+##### most stringent filtering
 ##### filtered for depth, and allowing for up to 25% missing data
 
 `vcftools --vcf maxdp30_mindp2.vcf --max-missing 0.75 --recode`
@@ -63,7 +63,7 @@ After filtering, kept 13232 out of a possible 56218 Sites
 ***
 
 #### VCF for RoH 
-###### less stringent - GBS is a reduced representation of the whole genome, so important to retain as many informative markers as possible to inform patterns across the genome
+##### less stringent - GBS is a reduced representation of the whole genome, so important to retain as many informative markers as possible to inform patterns across the genome
 ##### filtered for depth, and allowing for up to 50% missing data
 
 `vcftools --vcf maxdp30_mindp2.vcf --max-missing 0.50 --recode`
