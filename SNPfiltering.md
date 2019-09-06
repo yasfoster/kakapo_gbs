@@ -11,7 +11,7 @@
 
 `vcftools --vcf unfilt.vcf --remove-indv Sarah --remove-indv Tiaho --remove-indv Weheruatanga --recode`
 
-Final vcf: unfilt_removed_indv_high_miss.vcf
+###### Final vcf: unfilt_removed_indv_high_miss.vcf
 
 ***
 
@@ -30,12 +30,13 @@ After filtering, kept 179 out of 179 Individuals
 
 After filtering, kept 56218 out of a possible 58466 Sites
 
-Final vcf: nosex_unfilt.vcf
+###### Final vcf: nosex_unfilt.vcf
 
 ***
 
 #### VCF for KGD > Fgrm
-##### filtered for max depth of 30, min depth 2
+###### minimal filtering as KGD applies its own (e.g. sample & SNP depth > 0.01)
+##### filtered for maximum depth of 30, minimum depth of 2
 
 `vcftools --vcf nosex_unfilt.vcf --minDP 2 --maxDP 30 --recode`
 
@@ -49,7 +50,7 @@ After filtering, kept 56218 out of a possible 56218 Sites
 
 #### VCF for Fcoff & sMLH 
 ###### most stringent filtering
-##### filtered for depth, and allowing for 25% missing data
+##### filtered for depth, and allowing for up to 25% missing data
 
 `vcftools --vcf maxdp30_mindp2.vcf --max-missing 0.75 --recode`
 
@@ -63,7 +64,7 @@ After filtering, kept 13232 out of a possible 56218 Sites
 
 #### VCF for RoH 
 ###### less stringent - GBS is a reduced representation of the whole genome, so important to retain as many informative markers as possible to inform patterns across the genome
-##### filtered for depth, and allowing for 50% missing data
+##### filtered for depth, and allowing for up to 50% missing data
 
 `vcftools --vcf maxdp30_mindp2.vcf --max-missing 0.50 --recode`
 
