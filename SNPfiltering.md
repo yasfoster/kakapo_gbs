@@ -43,12 +43,12 @@ After filtering, kept 179 out of 179 Individuals
 
 After filtering, kept 56218 out of a possible 56218 Sites
 
-Final vcf: KGD_maxdp30_mindp2.vcf
+###### Final vcf: KGD_maxdp30_mindp2.vcf
 
 ***
 
-#### VCF for Fcoff, sMLH, RoH
-##### filtered for depth, and 25% missing data
+#### VCF for Fcoff & sMLH (most stringent filtering)
+##### filtered for depth, and allowing for 25% missing data
 
 `vcftools --vcf maxdp30_mindp2.vcf --max-missing 0.75 --recode`
 
@@ -56,6 +56,19 @@ After filtering, kept 179 out of 179 Individuals
 
 After filtering, kept 13232 out of a possible 56218 Sites
 
-Final vcf: maxdp30_mindp2_md75.vcf
+###### Final vcf: maxdp30_mindp2_md75.vcf
+
+***
+
+#### VCF for RoH (less stringent - GBS is a reduced representation of the whole genome, so important to retain as many informative markers as possible to inform patterns across the genome)
+##### filtered for depth, and allowing for 50% missing data
+
+`vcftools --vcf maxdp30_mindp2.vcf --max-missing 0.50 --recode`
+
+After filtering, kept 179 out of 179 Individuals
+
+After filtering, kept 24930 out of a possible 56218 Sites
+
+###### Final vcf: maxdp30_mindp2_md50.vcf
 
 ***
