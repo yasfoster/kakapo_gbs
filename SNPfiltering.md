@@ -35,7 +35,7 @@ Final vcf: nosex_unfilt.vcf
 ***
 
 #### VCF for KGD > Fgrm
-##### filter for max depth of 30, min depth 2
+##### filtered for max depth of 30, min depth 2
 
 `vcftools --vcf nosex_unfilt.vcf --minDP 2 --maxDP 30 --recode`
 
@@ -47,7 +47,8 @@ After filtering, kept 56218 out of a possible 56218 Sites
 
 ***
 
-#### VCF for Fcoff & sMLH (most stringent filtering)
+#### VCF for Fcoff & sMLH 
+###### most stringent filtering
 ##### filtered for depth, and allowing for 25% missing data
 
 `vcftools --vcf maxdp30_mindp2.vcf --max-missing 0.75 --recode`
@@ -60,7 +61,8 @@ After filtering, kept 13232 out of a possible 56218 Sites
 
 ***
 
-#### VCF for RoH (less stringent - GBS is a reduced representation of the whole genome, so important to retain as many informative markers as possible to inform patterns across the genome)
+#### VCF for RoH 
+###### less stringent - GBS is a reduced representation of the whole genome, so important to retain as many informative markers as possible to inform patterns across the genome
 ##### filtered for depth, and allowing for 50% missing data
 
 `vcftools --vcf maxdp30_mindp2.vcf --max-missing 0.50 --recode`
