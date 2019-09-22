@@ -190,12 +190,28 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5775499/pdf/EVA-11-123.pdf
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4815495/pdf/hdy201517a.pdf
 
 ##### Difference between Grossen et al. & Kardos papers is --homozyg-density (kb/snp)
+###### Average kakapo SNP density for 12241  SNPs, & autosomal genome lenth of 1.028666775 Gb:
+###### 1028666.775/12241 = 84.03453762 kb/SNPs, then PLINK Parameter density (according to Kardos et al.) is real SNP density x 1.5 
+###### SNP density = 126.0518064 kb/SNPs, --homozy-density 130 most suited to data
 
 `plink --vcf filtered.vcf --allow-extra-chr --double-id --out filtered_test`
 
 `plink --bfile filtered_test --recode --tab --allow-extra-chr --out filtered_test`
 
-`plink --file filtered_test --allow-extra-chr --homozyg --homozyg-snp 25 --homozyg-het 1 --homozyg-density 180 --homozyg-gap 1000 --homozyg-window-snp 25 --homozyg-window-het 1 --homozyg-window-missing 5 --homozyg-window-threshold 0.05 --out filtered_roh`
+`plink --file filtered_roh_80 --allow-extra-chr --homozyg --homozyg-snp 25 --homozyg-het 1 --homozyg-density 130 --homozyg-gap 1000 --homozyg-window-snp 25 --homozyg-window-het 1 --homozyg-window-missing 5 --homozyg-window-threshold 0.05 --out roh_130d`
+
+#SNP Density 130 kb/SNP, >25 SNPs per ROH
+#--homozyg: Scan complete, found 9372 ROH
+
+####ADDITIONAL PARAMETER TESTING: in addition to calculating SNP density, the total length of RoH (Mb, from .hom.indv output) plotted against frequency of missing data per individual (vcftools --missing-indv), too see effect of missing data on calling of RoH
+####130 DENSITY IS DEFINITELY MOST SUITABLE - doesn't infalte missing data individuals i.e. individuals with more missing data aren't calling more RoH that those with more markers (calling RoH that potentially doesn't exist e.g. extrapolating)
+
+
+############################
+
+
+
+
 
 
 ***
