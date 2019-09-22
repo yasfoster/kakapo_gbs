@@ -190,7 +190,8 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5775499/pdf/EVA-11-123.pdf
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4815495/pdf/hdy201517a.pdf
 
 ##### Difference between Grossen et al. & Kardos papers is --homozyg-density (kb/snp)
-###### Average kakapo SNP density for 12241  SNPs, & autosomal genome lenth of 1.028666775 Gb:
+
+###### Average kakapo SNP density for 12241  SNPs& autosomal genome lenth of 1.028666775 Gb:
 ###### 1028666.775/12241 = 84.03453762 kb/SNPs, then PLINK Parameter density (according to Kardos et al.) is real SNP density x 1.5 
 ###### SNP density = 126.0518064 kb/SNPs, --homozy-density 130 most suited to data
 
