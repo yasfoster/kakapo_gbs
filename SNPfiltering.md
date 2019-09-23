@@ -7,7 +7,7 @@ Z chromosome CM013763.1
 W chromosome CM013773.1
 
 
-#### Initial filtering: remove sex chomosomes and fitltered for minimum depth 2 & max depth 30, for unfiltered.vcf i.e. straight outta STACKS
+#### Initial filtering: remove sex chomosomes and filtered for minimum depth of 2 & maimumx depth of 30, for unfiltered.vcf i.e. straight out of STACKS
 
 `vcftools --vcf 1_unfilt.vcf --not-chr CM013763.1 --not-chr CM013773.1 --minDP 2 --maxDP 30 --recode`
 
@@ -31,13 +31,13 @@ After filtering, kept 56218 out of a possible 56218 Sites
 
 #### VCF for KGD > Fgrm
 ##### minimal filtering as KGD applies its own (e.g. sample & SNP depth > 0.01)
-###### Final vcf: KGD_maxdp30_mindp2.vcf
+###### Final KGD vcf: KGD_maxdp30_mindp2.vcf
 
 ***
 
 #### VCF for Fcoff, sMLH & RoH 
 ##### most stringent filtering
-##### filtered for depth, and allowing for up to 20% missing data
+##### filtered for depth, then allowing for up to 20% missing data
 
 `vcftools --vcf maxdp30_mindp2.vcf --max-missing 0.80 --recode`
 
