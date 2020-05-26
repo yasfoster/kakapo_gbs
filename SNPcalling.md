@@ -59,6 +59,6 @@ Referenced-based SNP calling for *Strigops habroptilus*
 
 #### with reduced soft clipping and no population filters
 
-`ref_map.pl -b 1 -T 8 -o /stacks/stacks_final/ -O /stacks/info/popmap.txt --samples /stacks/stacks_final/alignments_bwa/ -S -X "pstacks:--max_clipped 0.5" -X "populations:--fstats -k --log_fst_comp --vcf --vcf_haplotypes --genepop --plink --verbose"`
+`ref_map.pl -b 1 -T 8 -o /stacks/stacks_final/ -O /stacks/info/popmap.txt --samples /stacks/stacks_final/alignments_bwa/ -S -X "pstacks:--max_clipped 0.5" -X "populations:-p 1 --write_single_snp --vcf --plink --verbose"`
 
 ***
