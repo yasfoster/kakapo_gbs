@@ -11,10 +11,6 @@ W chromosome CM013773.1
 
 `vcftools --vcf 1_unfilt.vcf --not-chr CM013763.1 --not-chr CM013773.1 --minDP 2 --maxDP 30 --recode`
 
-After filtering, kept 182 out of 182 Individuals
-
-After filtering, kept 56218 out of a possible 58466 Sites
-
 ***
 
 ##### After, --missing-indv to generate file reporting the missingness on a per-individual basis
@@ -23,21 +19,12 @@ After filtering, kept 56218 out of a possible 58466 Sites
 
 ##### removed individuals with high missingness >70%
 
-`vcftools --vcf filt_sexchr_minmaxdp.vcf --remove-indv Sarah --remove-indv Tiaho --remove-indv Weheruatanga --remove-indv Waikawa --remove-indv Palmersan --remove-indv Ruth_16_1_1_YM --remove-indv Maestro --remove-indv Waa --remove-indv Sirocco --remove-indv Pea_16_1_1_B --remove-indv Evohe --remove-indv Moorhouse --remove-indv Sue_16_1_1_B --remove-indv Hananui --remove-indv Roha --remove-indv Awhero --recode`
-
-After filtering, kept 166 out of 182 Individuals
-
-After filtering, kept 56218 out of a possible 56218 Sites
-
-#### VCF for KGD > Fgrm
-##### minimal filtering as KGD applies its own (e.g. sample & SNP depth > 0.01)
-###### Final KGD vcf: KGD_maxdp30_mindp2.vcf
+`vcftools --vcf filt_sexchr_minmaxdp.vcf --remove-indv <name> --remove-indv <name> --remove-indv <name> --recode`
 
 ***
 
-#### VCF for Fcoff, sMLH & RoH 
-##### most stringent filtering
-##### filtered for depth, then allowing for up to 20% missing data
+#### Filter VCF for inbreeding estimates 
+##### filtered allowing up to 20% missing data
 
 `vcftools --vcf maxdp30_mindp2.vcf --max-missing 0.80 --recode`
 
