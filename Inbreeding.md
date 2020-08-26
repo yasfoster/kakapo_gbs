@@ -174,7 +174,7 @@ python2.7 vcf2ra_ro_ao.py filtered.vcf
 
 `write.table(Gfull_heatmap$G5, "G5_heatmap.txt", sep="\t")`
 
-###### In Excel, extract diagonal of G5 matrix for self-relatedness estimates
+###### In Excel, extract diagonal of G5 matrix for self-relatedness estimates, Fgrm = diagonal elements of matrix minus one
 
 `=INDEX(A1:E1,,ROWS($1:1))`
 
