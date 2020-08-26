@@ -206,7 +206,9 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4815495/pdf/hdy201517a.pdf
 
 ####ADDITIONAL PARAMETER TESTING: in addition to calculating SNP density, the total length of RoH (Mb, from .hom.indv output) plotted against frequency of missing data per individual (vcftools --missing-indv), too see effect of missing data on calling of RoH
 
-####130 DENSITY IS DEFINITELY MOST SUITABLE - doesn't infalte missing data individuals i.e. individuals with more missing data aren't calling more RoH that those with more markers (calling RoH that potentially doesn't exist e.g. extrapolating)
+####130 DENSITY IS DEFINITELY MOST SUITABLE - doesn't inflate missing data individuals i.e. individuals with more missing data aren't calling more RoH that those with more markers (calling RoH that potentially doesn't exist e.g. extrapolating)
+
+####Allowing up to three heterozygous sites (--homozyg-het 3) as suggested in Ceballos et al.(2018), did not impact the number of RoH found.
 
 
 ############################
