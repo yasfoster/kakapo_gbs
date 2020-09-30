@@ -7,7 +7,7 @@ Z chromosome CM013763.1
 W chromosome CM013773.1
 
 
-#### Initial filtering: remove sex chomosomes and filtered for minimum depth of 2 & maimumx depth of 30, for unfiltered.vcf i.e. straight out of STACKS
+#### Initial filtering: remove sex chomosomes and filtered for minimum depth of 2 & maximum depth of 30, for unfiltered.vcf i.e. straight out of STACKS
 
 `vcftools --vcf 1_unfilt.vcf --not-chr CM013763.1 --not-chr CM013773.1 --minDP 2 --maxDP 30 --recode`
 
