@@ -1,4 +1,4 @@
-#NEED TO DEFINE BETA FUNCTION IN R: hierfstat package up-to-date on R but function was not updated with it, so need to run manually. See J Goudet github pull requests for more information.
+#NEED TO DEFINE BETA FUNCTION IN R: hierfstat package up-to-date on R but function was not updated with it - need to run manually. See J Goudet github pull requests for more information.
 
 ```function (dat, nboot = 0, lim = c(0.025, 0.975), diploid = TRUE) 
 {
