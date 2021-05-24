@@ -1,9 +1,9 @@
 ## Inbreeding estimates
 
 
-### Inbreeding coefficient: Fcoff
+### Inbreeding coefficient: FH
 
-##### Vcftools --het calculates a measure of heterozygosity on a per-individual basis. Specfically, the inbreeding coefficient, Fcoff, is estimated for each individual using a method of moments
+##### Vcftools v.1.14 --het calculates a measure of heterozygosity on a per-individual basis. Specfically, the inbreeding coefficient (FH) is estimated for each individual using method of moments
 
 https://vcftools.github.io/man_latest.html
 
@@ -11,7 +11,7 @@ https://www.cog-genomics.org/plink/1.9/basic_stats#ibc
 
 `vcftools --vcf filtered.vcf --het`
 
-##### OR
+##### OR, PLINK v1.9 --het
 
 `plink --vcf filtered.vcf --allow-extra-chr --double-id --out filtered_test`
 
@@ -21,17 +21,16 @@ https://www.cog-genomics.org/plink/1.9/basic_stats#ibc
 
 ##### VCFtools --het and PLINK --het provide same output
 
-###### PLINK --het computes observed and expected autosomal homozygous genotype counts for each sample, and reports method-of-moments F coefficient estimates (i.e. (<observed hom. count> - <expected count>) / (<total observations> - <expected count>))
-
+###### PLINK --het computes observed and expected autosomal homozygous genotype counts for each sample, and reports method-of-moments F coefficient estimates 
 ###### PLINK --ibc (ported from GCTA) calculates three inbreeding coefficients for each sample. Briefly, Fhat1 is the usual variance-standardized relationship minus 1, Fhat2 is approximately equal to the --het estimate, and Fhat3 is based on the correlation between uniting gametes.
 
 
 ***
+***
 
 
 
-
-### InbreedR: standardised multilocus heterozygosity (sMLH)
+### InbreedR: standardised multilocus heterozygosity (sMLH), identity disequilibrium (g2), and heterozygosity-heterozygosity correlation coefficients
 
 ##### "Using SNP markers, it is possible to measure variance in inbreeding through the strength of correlation in heterozygosity across marker loci, termed identity disequilibrium (ID). ID can be quantified using the measure g2, which is also a central parameter in HFC theory that can be used within a wider framework to estimate the direct impact of inbreeding on both marker heterozygosity and fitness."(Stoffel et al. 2016).
 
@@ -138,13 +137,12 @@ https://cran.r-project.org/web/packages/inbreedR/vignettes/inbreedR_step_by_step
 `plot(hf, main = "r2 bootstrapping distribution - estimated r2 with CI", col = "cornflowerblue", cex.axis=0.85)`
 
 
-###### wrecked laptop rip: sim_g2 <- simulate_g2(n_ind = 180, H_nonInb = 0.5, meanF = 0.2, varF = 0.03, subsets = seq(from = 1000, to = 14000, by = 1000), reps = 100, type = "snps")
-
-
+***
 ***
 
 
-## Kinship using GBS with depth adjustment (kGD): Fgrm
+
+## Kinship using GBS with depth adjustment (KGD): Fgrm
 
 ##### "Unbiased estimates of relatedness can be obtained by using only those SNPs with genotype calls in both individuals. The expected value of this estimator is independent of the SNP depth in each individual, under a model of genotype calling that includes the special case of the two alleles being read at random" (Dodds et al. 2015)
 
@@ -157,7 +155,7 @@ https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-015-2252-3
 ##### Convert VCF for KGD
 
 ```python
-python2.7 vcf2ra_ro_ao.py filtered.vcf
+python2.7 vcf2ra.py filtered.vcf
 ```
 
 #### In R-Studio
@@ -178,22 +176,25 @@ python2.7 vcf2ra_ro_ao.py filtered.vcf
 
 `=INDEX(A1:E1,,ROWS($1:1))`
 
+
+***
 ***
 
 
-## Runs of Homozygosity (RoH) in PLINK
 
-##### Following parameters similar to Grossen et al. 2017 and Kardos, Luikart & Allendorf et al. 2015
+## Runs of homozygosity (RoH) in PLINK: Froh
+
+##### Following parameters similar to Grossen et al. 2018 and Kardos, Luikart & Allendorf et al. 2015
 
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5775499/pdf/EVA-11-123.pdf
 
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4815495/pdf/hdy201517a.pdf
 
-##### Difference between Grossen et al. & Kardos papers is --homozyg-density (kb/snp)
+##### Difference between Grossen et al. & Kardos papers is parameter --homozyg-density (kb/snp)
 
-###### Average kakapo SNP density for 12241  SNPs& autosomal genome lenth of 1.028666775 Gb:
-###### 1028666.775/12241 = 84.03453762 kb/SNPs, then PLINK Parameter density (according to Kardos et al.) is real SNP density x 1.5 
-###### SNP density = 126.0518064 kb/SNPs, --homozy-density 130 most suited to data
+###### Average kakapo SNP density for 12,241 SNPs & autosomal genome lenth of 1.028666775 Gb:
+###### 1028666.775/12241 = 84.03453762 kb/SNPs, then PLINK parameter density (according to Kardos et al.) is real SNP density x 1.5 
+###### SNP density = 126.0518064 kb/SNPs, so --homozy-density 130 is most suited to the data
 
 `plink --vcf filtered.vcf --allow-extra-chr --double-id --out filtered_test`
 
@@ -204,9 +205,9 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4815495/pdf/hdy201517a.pdf
 #SNP Density 130 kb/SNP, >25 SNPs per ROH
 #--homozyg: Scan complete, found 9372 ROH
 
-####ADDITIONAL PARAMETER TESTING: in addition to calculating SNP density, the total length of RoH (Mb, from .hom.indv output) plotted against frequency of missing data per individual (vcftools --missing-indv), too see effect of missing data on calling of RoH
+####ADDITIONAL PARAMETER TESTING: in addition to calculating SNP density, the total length of RoH (Mb, from .hom.indv output) plotted against frequency of missing data per individual (vcftools --missing-indv), to see effect of missing data on calling of RoH
 
-####130 DENSITY IS DEFINITELY MOST SUITABLE - doesn't inflate missing data individuals i.e. individuals with more missing data aren't calling more RoH that those with more markers (calling RoH that potentially doesn't exist e.g. extrapolating)
+####130 DENSITY IS MOST SUITABLE: doesn't inflate individuals with larger missing data i.e. individuals with missing data aren't calling more/less RoH than those with more markers
 
 ####Allowing up to three heterozygous sites (--homozyg-het 3) as suggested in Ceballos et al.(2018), did not impact the number of RoH found.
 
