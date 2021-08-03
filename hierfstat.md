@@ -1,4 +1,7 @@
-#NEED TO DEFINE BETA FUNCTION IN R: hierfstat package up-to-date on R but function was not updated with it - need to run manually. See J Goudet github pull requests for more information.
+#### NOTE: THIS METHOD IS NO LONGER USED IN THIS MS AS IT WAS COLINEAR WITH FH. KEEPING FUNCTION FOR RECORD KEEPING.
+
+#### NEED TO DEFINE BETA FUNCTION IN R: hierfstat package up-to-date in R but function was not updated along with it - need to run manually. See J Goudet github pull requests for more information.
+
 
 ```function (dat, nboot = 0, lim = c(0.025, 0.975), diploid = TRUE) 
 {
