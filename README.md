@@ -1,6 +1,6 @@
 # Kākāpō Genotyping-by-sequencing (GBS)
 
-## Foster et al. 2021. (*In press*) - Genomic signatures of inbreeding in a critically endangered parrot, the kākāpō
+### Foster et al. 2021. (*In press*) - Genomic signatures of inbreeding in a critically endangered parrot, the kākāpō
 
 ##
 
@@ -17,5 +17,14 @@ Alignment with BWA, referenced-based SNP calling with Stacks, filtering with VCF
 3- [Inbreeding.md](Inbreeding.md): multiple methods for estimating inbreeding metrics
 
 Email for questions: yasmin.foster@postgrad.otago.ac.nz OR y.al.foster@gmail.com
+
+***
+
+
+![Lisa_kakapo](https://user-images.githubusercontent.com/24398551/127969989-96cd0d5d-a1af-40cc-a8a2-7ca417dd620c.jpg)
+
+Female kākāpō, Lisa. A Stewart Island founder. 
+
+Photo: Jake Osborne. Kākāpō field ranger extraordinaire.
 
 ***
