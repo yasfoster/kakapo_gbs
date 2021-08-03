@@ -1,10 +1,10 @@
 # Kakapo GBS
 
-## Foster et al. (*in review*) - Genomic signatures of inbreeding in a critically endangered parrot, the kakapo
+## Foster et al. (*in press*) - Genomic signatures of inbreeding in a critically endangered parrot, the kākāpō
 
 ##
 
-Genotyping-by-sequencing (GBS) performed at AgResearch Invermay (NZ) for *Strigops habroptilus*, the kakapo parrot.
+Genotyping-by-sequencing (GBS) performed at AgResearch Invermay (NZ) for *Strigops habroptilus*, the kākāpō parrot.
 
 Single-ended and double-digested with MspI and PstI.
 
