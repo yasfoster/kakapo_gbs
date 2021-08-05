@@ -16,7 +16,7 @@ Alignment with BWA, referenced-based SNP calling with Stacks, filtering with VCF
 
 3- [Inbreeding.md](Inbreeding.md): multiple methods for estimating inbreeding metrics
 
-Email for questions: yasmin.foster@postgrad.otago.ac.nz OR y.al.foster@gmail.com
+Email for questions: y.al.foster@gmail.com OR yasmin.foster@postgrad.otago.ac.nz
 
 ***
 
