@@ -1,6 +1,6 @@
-## Inbreeding estimates
+## Inbreeding estimates for kākāpō
 
-See methods section for summary of each inbreeding metric
+See methods section for summary of each inbreeding metric, including other aliases, mathematical equations etc. 
 
 ### Inbreeding coefficient: FH
 
