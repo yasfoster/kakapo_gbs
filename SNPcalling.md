@@ -8,11 +8,13 @@ Referenced-based SNP calling for *Strigops habroptilus*
 #### Process_radtags (a module of Stacks v1.46) to demultiplex raw reads and trim barcodes. Provide restriction enzyme information to check for intact enzyme cutsites
 ##### Input files: raw sequence data (.fastq) and corresponding barcodes (.txt)
 
-`process_radtags -p /stacks/raw/lane1/ -b /stacks/info/barcodes_lane1.txt -o /stacks/ --renz_1 pstI --renz_2 mspI --inline_null -c -q -r &> process_radtags_test.lane1.oe `
+```
+process_radtags -p /stacks/raw/lane1/ -b /stacks/info/barcodes_lane1.txt -o /stacks/ --renz_1 pstI --renz_2 mspI --inline_null -c -q -r &> process_radtags_test.lane1.oe 
 
-`process_radtags -p /stacks/raw/lane2/ -b /stacks/info/barcodes_lane2.txt -o /stacks/ --renz_1 pstI --renz_2 mspI --inline_null -c -q -r &> process_radtags_test.lane2.oe `
+process_radtags -p /stacks/raw/lane2/ -b /stacks/info/barcodes_lane2.txt -o /stacks/ --renz_1 pstI --renz_2 mspI --inline_null -c -q -r &> process_radtags_test.lane2.oe 
 
-`process_radtags -p /stacks/raw/lane3/ -b stacks/info/barcodes_lane3.txt -o /stacks/ --renz_1 pstI --renz_2 mspI --inline_null -c -q -r &> process_radtags_test.lane3.oe `
+process_radtags -p /stacks/raw/lane3/ -b stacks/info/barcodes_lane3.txt -o /stacks/ --renz_1 pstI --renz_2 mspI --inline_null -c -q -r &> process_radtags_test.lane3.oe 
+```
 
 For more details regarding input files and parameter choices, see:
 https://catchenlab.life.illinois.edu/stacks/comp/process_radtags.php
@@ -22,7 +24,7 @@ https://catchenlab.life.illinois.edu/stacks/comp/process_radtags.php
 #### Trimgalore v0.4.5, a wrapper that removes Illumina adapters, removes low quality bases (Q<20), and runs fastQC for quality-control information (checks for adapter contamination etc.)
 ##### Input files: demultiplexed reads (.fq)
 
-`trim_galore --quality 20 --fastqc $name.fq.gz`
+`trim_galore --quality 20 -a AGATCGGAAGAGCGGTTCAGCAGGAATGCCGAGACCGATCTCGTATGCCGTCTTCTGCTT --fastqc $name.fq.gz`
 
 For more usage details, see:
 https://github.com/FelixKrueger/TrimGalore/blob/master/Docs/Trim_Galore_User_Guide.md
