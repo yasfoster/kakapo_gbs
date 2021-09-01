@@ -1,6 +1,7 @@
 # Kākāpō Genotyping-by-sequencing (GBS)
 
-### Foster et al. 2021. (*In press*) - Genomic signatures of inbreeding in a critically endangered parrot, the kākāpō
+### Foster et al. 2021. Genomic signatures of inbreeding in a critically endangered parrot, the kākāpō. 
+### G3 Genes|Genomes|Genetics. https://doi.org/10.1093/g3journal/jkab307
 
 ##
 
